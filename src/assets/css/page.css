@@ -1,0 +1,402 @@
+@import url(//db.onlinewebfonts.com/c/eb289d26afbfd6114ddfdc053113218e?family=LPMQ+Isep+Misbah);
+
+@font-face {
+  font-family: "LPMQ Isep Misbah";
+  src: url("//db.onlinewebfonts.com/t/eb289d26afbfd6114ddfdc053113218e.eot");
+  src: url("//db.onlinewebfonts.com/t/eb289d26afbfd6114ddfdc053113218e.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/eb289d26afbfd6114ddfdc053113218e.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/eb289d26afbfd6114ddfdc053113218e.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/eb289d26afbfd6114ddfdc053113218e.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/eb289d26afbfd6114ddfdc053113218e.svg#LPMQ Isep Misbah")
+      format("svg");
+}
+
+router-link {
+  text-decoration: none !important;
+}
+
+:root {
+  --primary: #9345f2;
+}
+
+.title {
+  font-weight: 800;
+  color: var(--primary);
+  left: 6em;
+  bottom: 33px;
+}
+
+.intro {
+  color: #b9a2d8;
+}
+
+.card {
+  width: 360px;
+  height: 200px;
+  box-shadow: 0 5px 14px 0 rgb(65 69 88 / 10%),
+    0 20px 24px -20px rgb(0 0 0 / 10%);
+  border-radius: 20px;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url(@/assets/images/readingquran.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* .amin {
+  position: absolute;
+  margin-top: 70px;
+  animation: updown 2s linear infinite;
+}
+
+@keyframes updown {
+  0%,
+  100% {
+    top: 0;
+  }
+  50% {
+    top: 15px;
+  }
+} */
+
+@media only screen and (min-width: 480px) {
+  .card {
+    width: 450px;
+    height: 200px;
+    background-size: 350px;
+    background-size: cover;
+  }
+
+  .title {
+    font-weight: 800;
+    color: #9345f2;
+    left: 6.5em;
+    bottom: 35px;
+  }
+}
+
+.nav-surah {
+  width: 380px;
+  height: max-content;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.list {
+  height: 85px;
+  box-shadow: 0 5px 14px 0 rgb(65 69 88 / 10%),
+    0 20px 24px -20px rgb(0 0 0 / 10%);
+  border-radius: 10px;
+}
+
+.list-detail {
+  height: max-content;
+  border-radius: 10px;
+}
+
+@media only screen and (min-width: 480px) {
+  .nav-surah {
+    width: 470px;
+    height: max-content;
+    overflow-y: scroll;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
+}
+
+.surah-ke {
+  top: 15px;
+  width: 50px;
+  height: 50px;
+  background-image: url(@/assets/images/vector.png);
+  background-position-y: 2px;
+  font-weight: 900;
+  font-size: 12px;
+  color: #000;
+}
+
+.surah {
+  /* border: 1px solid black; */
+  right: 50px;
+  height: 80px;
+  width: 150px;
+}
+
+.surah .one {
+  position: relative;
+  top: 20px;
+  font-weight: 900;
+  font-size: 15px;
+  color: #000;
+}
+
+.surah .two {
+  position: relative;
+  top: 1px;
+  font-size: 12px;
+  font-style: italic;
+  color: #000;
+}
+
+.ayat {
+  top: 25px;
+  font-size: 18px;
+  left: 20px;
+  font-weight: 800;
+  color: #9345f2;
+}
+
+/* detail surah */
+.detail-surah {
+  height: 73vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.detail-row {
+  width: 22em;
+  height: max-content;
+  box-shadow: 1px 0px 12px -5px rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+}
+
+.number {
+  /* background-color: #b9a2d8; */
+  /* opacity: 0.5; */
+  background-image: url(@/assets/images/vector.png);
+  background-repeat: no-repeat;
+  background-size: 40px;
+  padding: 1px;
+  border-radius: 30px;
+  height: 40px;
+}
+
+.number .verses {
+  margin-top: 2px;
+  margin-left: 4px;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  padding: 8px;
+  color: black;
+  opacity: 1;
+  font-size: 13px;
+}
+
+.change-surah {
+  width: 22em;
+  height: 10em;
+  border-radius: 20px;
+  background: linear-gradient(to right, #9345f2, #b9a2d8);
+  box-shadow: 1px 4px 5px 1px rgba(151, 97, 218, 0.88);
+}
+
+.basmalah {
+  margin-top: 3.5em;
+  margin-left: 3em;
+  color: #fff;
+  font-size: 20px;
+}
+
+.detail-s {
+}
+
+.detail-s .arti {
+  font-family: poppins;
+  font-style: italic;
+}
+
+.detail-s .surah-detail {
+  /* @font-face {
+    font-family: "LPMQ Isep Misbah";
+    src: url("//db.onlinewebfonts.com/t/eb289d26afbfd6114ddfdc053113218e.eot");
+    src: url("//db.onlinewebfonts.com/t/eb289d26afbfd6114ddfdc053113218e.eot?#iefix")
+        format("embedded-opentype"),
+      url("//db.onlinewebfonts.com/t/eb289d26afbfd6114ddfdc053113218e.woff2")
+        format("woff2"),
+      url("//db.onlinewebfonts.com/t/eb289d26afbfd6114ddfdc053113218e.woff")
+        format("woff"),
+      url("//db.onlinewebfonts.com/t/eb289d26afbfd6114ddfdc053113218e.ttf")
+        format("truetype"),
+      url("//db.onlinewebfonts.com/t/eb289d26afbfd6114ddfdc053113218e.svg#LPMQ Isep Misbah")
+        format("svg");
+  } */
+  text-align: right;
+  margin-top: 20px;
+  font-size: 20px;
+  word-spacing: 5px;
+  color: #000;
+}
+
+.surah-name {
+  margin-left: 5.5em;
+  margin-top: 1em;
+  color: #fff;
+}
+
+@media only screen and (min-width: 480px) {
+  .change-surah {
+    width: 28em;
+    height: 10em;
+    border-radius: 20px;
+    background: linear-gradient(to right, #9345f2, #b9a2d8);
+    box-shadow: 1px 4px 5px 1px rgba(151, 97, 218, 0.88);
+  }
+
+  .basmalah {
+    margin-top: 3.5em;
+    margin-left: 3.5em;
+    color: #fff;
+    font-size: 20px;
+  }
+
+  .surah-name {
+    margin-left: 6.5em;
+    margin-top: 1em;
+    color: #fff;
+  }
+
+  .detail-surah {
+    height: 77vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  .detail-row {
+    width: 28em;
+    height: max-content;
+  }
+
+  .detail-row {
+    width: 27em;
+    height: max-content;
+    box-shadow: 1px 0px 12px -5px rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+  }
+}
+
+/* search */
+.nav-top {
+  width: 390px;
+  height: 60px;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px,
+    rgba(0, 0, 0, 0.117647) 0px 1px 4px;
+  border-radius: 15px;
+  background-image: url(@/assets/images/qurann.png);
+  background-repeat: no-repeat;
+  background-size: 50px;
+  background-position-x: 20em;
+  background-position-y: 5px;
+}
+
+@media only screen and (min-width: 480px) {
+  .nav-top {
+    width: 500px;
+    height: 60px;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px,
+      rgba(0, 0, 0, 0.117647) 0px 1px 4px;
+    border-radius: 15px;
+    background-position-x: 27em;
+  }
+
+  .input:focus,
+  .input:not(:invalid) {
+    width: 400px !important;
+    cursor: text;
+    /* box-shadow: 0px 0px 0px #0e0e0e, 0px 0px 0px rgb(95 94 94 / 25%),
+    inset 1.5px 1.5px 3px #0e0e0e, inset -1.5px -1.5px 3px #5f5e5e; */
+  }
+}
+
+::placeholder {
+  color: #fff;
+}
+
+.container {
+  position: relative;
+  --size-button: 40px;
+  z-index: 3;
+}
+
+.input {
+  padding-left: var(--size-button);
+  height: var(--size-button);
+  font-size: 15px;
+  border: none;
+  color: #fff;
+  outline: none;
+  width: var(--size-button);
+  transition: all ease 0.3s;
+  background-color: #b9a2d8;
+  box-shadow: 1.5px 1.5px 3px #0e0e0e, -1.5px -1.5px 3px rgb(95 94 94 / 25%),
+    inset 0px 0px 0px #0e0e0e, inset 0px -0px 0px #5f5e5e;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.input:focus,
+.input:not(:invalid) {
+  width: 300px;
+  cursor: text;
+  /* box-shadow: 0px 0px 0px #0e0e0e, 0px 0px 0px rgb(95 94 94 / 25%),
+    inset 1.5px 1.5px 3px #0e0e0e, inset -1.5px -1.5px 3px #5f5e5e; */
+}
+
+.input:focus + .icon,
+.input:not(:invalid) + .icon {
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.container .icon {
+  position: absolute;
+  width: var(--size-button);
+  height: var(--size-button);
+  top: 0;
+  left: 14px;
+  padding: 8px;
+  pointer-events: none;
+}
+
+.container .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* todo */
+.header-todo {
+  width: 100%;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #9345f2;
+}
+
+.right {
+  position: relative;
+  top: 2px;
+  left: 5px;
+  animation: right 3s linear infinite;
+}
+
+@keyframes right {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
