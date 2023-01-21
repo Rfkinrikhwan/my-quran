@@ -1,20 +1,41 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
+import GetStarted from "../views/GetStarted.vue";
+import Dashboard from "@/views/Dashboard.vue";
+import DetailQ from "@/views/DetailSurah.vue";
+import schedule from "@/views/JadwalSholat.vue";
+import todos from "@/views/Todo.vue";
+import doaharian from "@/views/DoaHarian.vue";
 
 const routes = [
   {
     path: "/",
     name: "home",
-    component: HomeView,
+    component: GetStarted,
   },
   {
-    path: "/about",
-    name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+    path: "/listsurah",
+    name: "Quran",
+    component: Dashboard,
+  },
+  {
+    path: "/detail/:surah",
+    name: "detail",
+    component: DetailQ,
+  },
+  {
+    path: "/jadwalsholat",
+    name: "schedulePrayer",
+    component: schedule,
+  },
+  {
+    path: "/doaharian",
+    name: "doadoa",
+    component: doaharian,
+  },
+  {
+    path: "/todo",
+    name: "todos",
+    component: todos,
   },
 ];
 
