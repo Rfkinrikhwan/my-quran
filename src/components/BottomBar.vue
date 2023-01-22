@@ -65,24 +65,8 @@ export default {
   }
 }
 
-.one {
-  width: 45px;
-  height: 45px;
-  background: linear-gradient(to right, #ae8cdb, #9345f2);
-  border-radius: 50px;
-  box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px,
-    rgba(0, 0, 0, 0.117647) 0px 1px 4px;
-}
-
-.two {
-  width: 45px;
-  height: 45px;
-  background: linear-gradient(to right, #ae8cdb, #9345f2);
-  border-radius: 50px;
-  box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px,
-    rgba(0, 0, 0, 0.117647) 0px 1px 4px;
-}
-
+.one,
+.two,
 .three {
   width: 45px;
   height: 45px;
@@ -94,13 +78,16 @@ export default {
 
 .one .sajadah {
   width: 40px;
+  padding: 5px;
 }
 
 .two .quran {
   width: 50px;
+  padding: 5px;
 }
 
 .three .latern {
   width: 40px;
+  padding: 5px;
 }
 </style>

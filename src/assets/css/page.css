@@ -1,8 +1,8 @@
-@import url(//db.onlinewebfonts.com/c/eb289d26afbfd6114ddfdc053113218e?family=LPMQ+Isep+Misbah);
+/* @import url(//db.onlinewebfonts.com/c/eb289d26afbfd6114ddfdc053113218e?family=LPMQ+Isep+Misbah); */
 
 @font-face {
   font-family: "LPMQ Isep Misbah";
-  src: url("//db.onlinewebfonts.com/t/eb289d26afbfd6114ddfdc053113218e.eot");
+  /* src: url("//db.onlinewebfonts.com/t/eb289d26afbfd6114ddfdc053113218e.eot"); */
   src: url("//db.onlinewebfonts.com/t/eb289d26afbfd6114ddfdc053113218e.eot?#iefix")
       format("embedded-opentype"),
     url("//db.onlinewebfonts.com/t/eb289d26afbfd6114ddfdc053113218e.woff2")
@@ -154,6 +154,7 @@ router-link {
   left: 20px;
   font-weight: 800;
   color: #9345f2;
+  font-family:  LPMQ Isep Misbah;
 }
 
 /* detail surah */
@@ -206,6 +207,7 @@ router-link {
   margin-left: 3em;
   color: #fff;
   font-size: 20px;
+  font-family:  LPMQ Isep Misbah;
 }
 
 .detail-s {
@@ -217,25 +219,14 @@ router-link {
 }
 
 .detail-s .surah-detail {
-  /* @font-face {
-    font-family: "LPMQ Isep Misbah";
-    src: url("//db.onlinewebfonts.com/t/eb289d26afbfd6114ddfdc053113218e.eot");
-    src: url("//db.onlinewebfonts.com/t/eb289d26afbfd6114ddfdc053113218e.eot?#iefix")
-        format("embedded-opentype"),
-      url("//db.onlinewebfonts.com/t/eb289d26afbfd6114ddfdc053113218e.woff2")
-        format("woff2"),
-      url("//db.onlinewebfonts.com/t/eb289d26afbfd6114ddfdc053113218e.woff")
-        format("woff"),
-      url("//db.onlinewebfonts.com/t/eb289d26afbfd6114ddfdc053113218e.ttf")
-        format("truetype"),
-      url("//db.onlinewebfonts.com/t/eb289d26afbfd6114ddfdc053113218e.svg#LPMQ Isep Misbah")
-        format("svg");
-  } */
   text-align: right;
   margin-top: 20px;
   font-size: 20px;
   word-spacing: 5px;
   color: #000;
+  font-family: LPMQ Isep Misbah;
+  font-weight: 700;
+  line-height: 50px;
 }
 
 .surah-name {
@@ -399,4 +390,12 @@ router-link {
   100% {
     opacity: 0;
   }
+}
+
+
+
+/* doaharian */
+.doa-harian{
+  font-family: LPMQ Isep Misbah;
+  letter-spacing: 1.5px;
 }
