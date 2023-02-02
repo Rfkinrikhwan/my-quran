@@ -6,10 +6,19 @@
       <div>
         <div class="row wrap">
           <div
+            class="three position-relative col d-flex justify-content-center align-items-center"
+          >
+            <router-link to="/sholat">
+              <img class="rug" src="@/assets/images/Icon.svg" alt="" />
+            </router-link>
+          </div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div
             class="one position-relative col d-flex justify-content-center align-items-center"
           >
             <router-link to="/doaharian">
-              <img class="sajadah" src="@/assets/images/pray.svg" alt="" />
+              <img class="sajadah" src="@/assets/images/prayer.svg" alt="" />
             </router-link>
           </div>
           <div class="col"></div>
@@ -18,7 +27,7 @@
             class="two position-relative col d-flex justify-content-center align-items-center"
           >
             <router-link to="/listsurah">
-              <img class="quran" src="@/assets/images/holy.png" alt="" />
+              <img class="quran" src="@/assets/images/qurann.svg" alt="" />
             </router-link>
           </div>
           <div class="col"></div>
@@ -27,7 +36,7 @@
             class="three position-relative col d-flex justify-content-center align-items-center"
           >
             <router-link to="/todo">
-              <img class="latern" src="@/assets/images/latern.png" alt="" />
+              <img class="latern" src="@/assets/images/bar.svg" alt="" />
             </router-link>
           </div>
         </div>
@@ -39,6 +48,30 @@
 <script>
 export default {
   name: "BottomBar",
+  data: () => ({
+    toBottom: [
+      {
+        name: "",
+        img: "@/assets/images/Icon.svg",
+        url: "/sholat",
+      },
+      {
+        name: "",
+        img: "@/assets/images/Icon.svg",
+        url: "/sholat",
+      },
+      {
+        name: "",
+        img: "@/assets/images/Icon.svg",
+        url: "/sholat",
+      },
+      {
+        name: "",
+        img: "@/assets/images/Icon.svg",
+        url: "/sholat",
+      },
+    ],
+  }),
 };
 </script>
 
@@ -70,10 +103,10 @@ export default {
 .three {
   width: 45px;
   height: 45px;
-  background: linear-gradient(to right, #ae8cdb, #9345f2);
   border-radius: 50px;
   box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px,
     rgba(0, 0, 0, 0.117647) 0px 1px 4px;
+  transition: 0.3s ease;
 }
 
 .one .sajadah {
@@ -82,12 +115,17 @@ export default {
 }
 
 .two .quran {
-  width: 50px;
+  width: 45px;
   padding: 5px;
 }
 
 .three .latern {
-  width: 40px;
+  width: 35px;
+  padding: 5px;
+}
+
+.three .rug {
+  width: 45px;
   padding: 5px;
 }
 </style>

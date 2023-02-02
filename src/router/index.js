@@ -1,10 +1,10 @@
 import { createRouter, createWebHistory } from "vue-router";
 import GetStarted from "../views/GetStarted.vue";
-import Dashboard from "@/views/Dashboard.vue";
-import DetailQ from "@/views/DetailSurah.vue";
-import schedule from "@/views/JadwalSholat.vue";
-import todos from "@/views/Todo.vue";
-import doaharian from "@/views/DoaHarian.vue";
+import Dashboard from "@/views/Dashboard/Dashboard.vue";
+import DetailQ from "@/views/Dashboard/DetailSurah.vue";
+import todos from "@/views/Todos/Todo.vue";
+import doaharian from "@/views/DoaHarian/IndexDoa.vue";
+import jadwalSholat from "@/views/Sholat/JadwalSholat.vue";
 
 const routes = [
   {
@@ -18,14 +18,9 @@ const routes = [
     component: Dashboard,
   },
   {
-    path: "/detail/:surah",
+    path: "/surah/:surah",
     name: "detail",
     component: DetailQ,
-  },
-  {
-    path: "/jadwalsholat",
-    name: "schedulePrayer",
-    component: schedule,
   },
   {
     path: "/doaharian",
@@ -36,6 +31,11 @@ const routes = [
     path: "/todo",
     name: "todos",
     component: todos,
+  },
+  {
+    path: "/sholat",
+    name: "sholat",
+    component: jadwalSholat,
   },
 ];
 

@@ -3,18 +3,18 @@
     <div class="content-in d-flex justify-content-center align-items-center">
       <div class="container text-center">
         <div class="row d-flex justify-content-center align-items-center">
-          <div class="title col-6 mt-5">
+          <div class="title col-6 mt-0">
             <h1>Quran App</h1>
           </div>
         </div>
         <div class="row d-flex justify-content-center align-items-center">
-          <div class="sub-title col-6 mt-3">
+          <div class="sub-title col-12 mt-0">
             <p>Learn Quran and Recite once everyday</p>
           </div>
         </div>
         <div class="row d-flex justify-content-center align-items-center">
           <div class="front col-6 mt-3">
-            <img class="quran-one" src="@/assets/images/quranhome.png" alt="" />
+            <!-- <img class="quran-one" src="@/assets/images/quranhome.png" alt="" /> -->
           </div>
           <div class="col-6">
             <button class="started">
@@ -48,9 +48,8 @@ export default {
   width: 350px;
   border-radius: 30px;
   background-color: #5222c2;
-  background-image: url(@/assets/images/star-removebg-preview.png);
-  background-size: 70px;
-  background-repeat: space;
+  background-image: url(@/assets/images/started.svg);
+  background-size: cover;
 }
 
 .title h1 {
@@ -65,7 +64,7 @@ export default {
   width: 150px;
   border: none;
   padding: 15px;
-  background-color: #e68e70;
+  background-color: #f9b091;
   color: #faf8fc;
   border-radius: 30px;
   font-weight: 800;
