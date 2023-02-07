@@ -1,18 +1,12 @@
 <template>
-  <div class="">
-    <router-link to="/listsurah">
-      <i
-        style="font-size: 25px; color: black"
-        class="fa-solid fa-arrow-left mt-2 ms-2"
-      ></i>
-    </router-link>
+  <div style="height: 99vh">
     <second-nav />
 
-    <section class="mt-2">
+    <section class="mt-5">
       <div class="detail-surah">
         <div
           class="container d-flex justify-content-center align-items-center"
-          v-for="(surahs, key) in surah"
+          v-for="(surahs, key) in surah.ayat"
           :key="key"
         >
           <div class="row row-cols-1">
@@ -22,16 +16,15 @@
                   <h5
                     class="verses d-flex justify-content-center align-items-center"
                   >
-                    {{ surahs.nomor }}
+                    {{ surahs.nomorAyat }}
                   </h5>
                 </div>
                 <div class="detail-s">
                   <p class="surah-detail">
-                    {{ surahs.ar }}
+                    {{ surahs.teksArab }}
                   </p>
-                  <!-- <br /> -->
                   <span class="mt-2 arti">
-                    {{ surahs.nomor + ". " + surahs.idn }}
+                    {{ surahs.nomorAyat + ". " + surahs.teksIndonesia }}
                   </span>
                 </div>
               </div>
@@ -48,9 +41,11 @@ import secondNav from "@/components/secondNav.vue";
 
 export default {
   data: () => ({
-    url: "https://equran.id/api/surat",
+    url: "https://equran.id/api/v2/surat",
     surah: {},
     loading: false,
+    data: false,
+    namaSurah: [],
   }),
   components: {
     secondNav,
@@ -59,13 +54,12 @@ export default {
     getDetailSurah: async function () {
       try {
         this.loading = false;
+        this.namaSurah = this.$route.params.surah;
+
         const dataS = await fetch(this.url + "/" + this.$route.params.surah);
         const surahs = await dataS.json();
-        const ayat = surahs.ayat.map((detail) => {
-          return detail;
-        });
-        this.surah = ayat;
-        console.log(this.$route.params.surah);
+        this.surah = surahs.data;
+        console.log(this.surah);
       } catch (e) {
         console.log(e.message);
       }
@@ -76,6 +70,7 @@ export default {
 
   mounted: function () {
     this.getDetailSurah();
+    this.data = true;
   },
 };
 </script>

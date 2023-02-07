@@ -4,7 +4,7 @@
       <div class="container text-center">
         <div class="row d-flex justify-content-center align-items-center">
           <div class="title col-6 mt-0">
-            <h1>Quran App</h1>
+            <h1>ABIZAR</h1>
           </div>
         </div>
         <div class="row d-flex justify-content-center align-items-center">
@@ -20,7 +20,7 @@
             <button class="started">
               <router-link
                 style="text-decoration: none; color: #faf8fc"
-                to="/listsurah"
+                to="/menu"
                 >Get started</router-link
               >
             </button>

@@ -5,6 +5,8 @@ import DetailQ from "@/views/Dashboard/DetailSurah.vue";
 import todos from "@/views/Todos/Todo.vue";
 import doaharian from "@/views/DoaHarian/IndexDoa.vue";
 import jadwalSholat from "@/views/Sholat/JadwalSholat.vue";
+import DetailJadwalVue from "@/views/Sholat/DetailJadwal.vue";
+import MenuList from "@/views/menu/MenuList.vue";
 
 const routes = [
   {
@@ -18,7 +20,7 @@ const routes = [
     component: Dashboard,
   },
   {
-    path: "/surah/:surah",
+    path: "/surah/:surah/:namaLatin",
     name: "detail",
     component: DetailQ,
   },
@@ -36,6 +38,16 @@ const routes = [
     path: "/sholat",
     name: "sholat",
     component: jadwalSholat,
+  },
+  {
+    path: "/sholat/:kota/:nama",
+    name: "praysholat",
+    component: DetailJadwalVue,
+  },
+  {
+    path: "/menu",
+    name: "manu",
+    component: MenuList,
   },
 ];
 

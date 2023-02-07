@@ -1,12 +1,17 @@
 <template>
   <div>
     <section class="d-flex justify-content-center align-items-center">
-      <div class="change-surah">
-        <!-- <h4 class="surah-name">
-          <p>{{ $route.params.surah }}</p>
-        </h4> -->
+      <div class="change-surah d-flex justify-content-start align-items-center">
+        <router-link to="/listsurah">
+          <!-- <i
+            style="font-size: 25px; color: black"
+            class="fa-solid fa-chevron-left"
+          ></i> -->
+        </router-link>
         <h4 class="basmalah">
-          بِسْــــــــــــــــــمِ اللهِ الرَّحْمَنِ الرَّحِيْمِ
+          <router-link to="/listsurah">
+            {{ $route.params.namaLatin }}
+          </router-link>
         </h4>
       </div>
     </section>

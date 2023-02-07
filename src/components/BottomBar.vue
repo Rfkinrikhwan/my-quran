@@ -35,7 +35,7 @@
           <div
             class="three position-relative col d-flex justify-content-center align-items-center"
           >
-            <router-link to="/todo">
+            <router-link to="/menu">
               <img class="latern" src="@/assets/images/bar.svg" alt="" />
             </router-link>
           </div>

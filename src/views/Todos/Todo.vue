@@ -127,18 +127,14 @@
       </div>
     </section>
   </div>
-  <BottomBar />
 </template>
 
 <script>
-import BottomBar from "@/components/BottomBar.vue";
 import { ref } from "vue";
 
 export default {
   name: "todoVue",
-  components: {
-    BottomBar,
-  },
+  components: {},
   data: () => ({
     searchSchedule: "",
     defaultData: [

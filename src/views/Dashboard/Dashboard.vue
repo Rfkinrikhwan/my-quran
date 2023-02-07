@@ -39,6 +39,11 @@
             </div>
           </div>
           <h3 class="title position-relative">Al-Quran</h3>
+          <router-link to="/menu">
+            <h3 class="title2 position-relative">
+              <i class="fa-solid fa-house-chimney"></i>
+            </h3>
+          </router-link>
         </div>
       </nav>
     </section>
@@ -59,16 +64,16 @@
     <section
       class="mt-3 d-flex justify-content-center align-items-center container"
     >
-      <div class="nav-surah mt-3">
+      <div class="nav-surah">
         <div class="container">
           <div class="row row-cols-1" v-for="(surah, key) in filter" :key="key">
             <router-link
               style="text-decoration: none"
-              :to="'/surah/' + surah.nomor"
+              :to="'/surah/' + surah.nomor + '/' + surah.namaLatin"
             >
               <div class="col mt-1">
                 <div
-                  class="list d-flex justify-content-center align-items-center mt-3"
+                  class="list d-flex justify-content-center align-items-center mb-3"
                 >
                   <div class="container">
                     <div class="row row-cols-3">
@@ -81,10 +86,10 @@
                       </div>
                       <div class="col">
                         <div class="surah position-relative">
-                          <p class="one">{{ surah.nama_latin }}</p>
+                          <p class="one">{{ surah.namaLatin }}</p>
                           <p class="two">
                             {{
-                              surah.arti + " - " + surah.jumlah_ayat + " ayat"
+                              surah.arti + " - " + surah.jumlahAyat + " ayat"
                             }}
                           </p>
                         </div>
@@ -111,17 +116,12 @@
       <div class="sumber">Sumber Kemenag Go.id</div>
     </section>
   </div>
-  <BottomBar />
 </template>
 
 <script>
-import BottomBar from "@/components/BottomBar.vue";
-
 export default {
   name: "DashBoard",
-  components: {
-    BottomBar,
-  },
+  components: {},
   data: () => ({
     searchSurah: "",
     listSurah: [],
@@ -169,10 +169,10 @@ export default {
     // },
 
     getSurah: async function () {
-      const raw = await fetch("https://equran.id/api/surat");
+      const raw = await fetch("https://equran.id/api/v2/surat");
       const data = await raw.json();
-      this.listSurah = data;
-      console.log();
+      this.listSurah = data.data;
+      console.log(this.listSurah);
 
       // const namaSurah = [];
 
@@ -193,8 +193,8 @@ export default {
       if (!this.searchSurah) {
         return this.listSurah;
       } else {
-        return this.listSurah.filter(({ nama_latin }) =>
-          nama_latin.toLowerCase().includes(this.searchSurah.toLowerCase())
+        return this.listSurah.filter(({ namaLatin }) =>
+          namaLatin.toLowerCase().includes(this.searchSurah.toLowerCase())
         );
       }
     },

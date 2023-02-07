@@ -39,6 +39,11 @@
             </div>
           </div>
           <h3 class="title position-relative">Doa Harian</h3>
+          <router-link to="/menu">
+            <h3 class="title2 position-relative">
+              <i class="fa-solid fa-house-chimney"></i>
+            </h3>
+          </router-link>
         </div>
       </nav>
     </section>
@@ -109,16 +114,11 @@
       <div class="sumber">Sumber Kemenag Go.id</div>
     </section>
   </div>
-  <BottomBar />
 </template>
 
 <script>
-import BottomBar from "@/components/BottomBar.vue";
-
 export default {
-  components: {
-    BottomBar,
-  },
+  components: {},
   data: () => ({
     detail: false,
     searchDoa: "",
