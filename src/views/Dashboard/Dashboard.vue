@@ -1,51 +1,53 @@
 <template>
   <div style="height: 99vh">
     <section>
-      <nav class="nav-top navbar fixed-top navbar-light bg-light">
+      <div class="nav-top fixed-top navbar-light bg-light">
         <div class="">
-          <div class="container">
-            <input
-              placeholder="Cari surah al-quran"
-              required=""
-              class="input"
-              name="text"
-              type="text"
-              autocomplete="off"
-              v-model="searchSurah"
-            />
-            <div class="icon">
-              <svg
-                viewBox="0 0 512 512"
-                class="ionicon"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <title>Search</title>
-                <path
-                  stroke-width="32"
-                  stroke-miterlimit="10"
-                  stroke="white"
-                  fill="none"
-                  d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z"
-                ></path>
-                <path
-                  d="M338.29 338.29L448 448"
-                  stroke-width="32"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke="white"
-                  fill="none"
-                ></path>
-              </svg>
+          <div class="container d-flex justify-content-start mt-2">
+            <div class="search">
+              <input
+                placeholder="Cari Surah..."
+                required=""
+                class="input"
+                name="text"
+                type="text"
+                autocomplete="off"
+                v-model="searchSurah"
+              />
+              <div class="icon">
+                <svg
+                  viewBox="0 0 512 512"
+                  class="ionicon"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Search</title>
+                  <path
+                    stroke-width="32"
+                    stroke-miterlimit="10"
+                    stroke="white"
+                    fill="none"
+                    d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z"
+                  ></path>
+                  <path
+                    d="M338.29 338.29L448 448"
+                    stroke-width="32"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke="white"
+                    fill="none"
+                  ></path>
+                </svg>
+              </div>
             </div>
+            <h3 class="mt-2 title" style="margin-left: 5.5em">Al Qur`an</h3>
+            <router-link to="/menu">
+              <h3 class="mt-1 title2" style="margin-left: 3em">
+                <i class="fa-solid fa-house-chimney"></i>
+              </h3>
+            </router-link>
           </div>
-          <h3 class="title position-relative">Al-Quran</h3>
-          <router-link to="/menu">
-            <h3 class="title2 position-relative">
-              <i class="fa-solid fa-house-chimney"></i>
-            </h3>
-          </router-link>
         </div>
-      </nav>
+      </div>
     </section>
 
     <section style="margin-top: 20%" class="container">
@@ -73,7 +75,7 @@
             >
               <div class="col mt-1">
                 <div
-                  class="list d-flex justify-content-center align-items-center mb-3"
+                  class="list d-flex justify-content-center align-items-center mb-2"
                 >
                   <div class="container">
                     <div class="row row-cols-3">
@@ -172,7 +174,6 @@ export default {
       const raw = await fetch("https://equran.id/api/v2/surat");
       const data = await raw.json();
       this.listSurah = data.data;
-      console.log(this.listSurah);
 
       // const namaSurah = [];
 

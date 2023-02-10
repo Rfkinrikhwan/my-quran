@@ -3,7 +3,7 @@
     <section class="d-flex justify-content-center align-item-center mt-3">
       <h1>ABIZAR</h1>
     </section>
-    <section class="mt-5 mb-5">
+    <section class="mt-4 mb-5">
       <div class="container px-4">
         <div class="row">
           <div class="col">

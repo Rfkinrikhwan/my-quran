@@ -19,25 +19,23 @@
 
 a {
   text-decoration: none !important;
+  z-index: 9999;
 }
 
 :root {
   --primary: #672cbc;
+  --secondary: #9345f2;
 }
 
 .title {
-  font-weight: 800;
   color: var(--primary);
-  left: 6em;
-  bottom: 33px;
-  /* margin: auto; */
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
 }
 
 .title2 {
-  font-weight: 800;
   color: var(--primary);
-  left: 14em;
-  bottom: 70px;
+  font-size: 25px;
 }
 
 .intro {
@@ -45,32 +43,25 @@ a {
 }
 
 .card {
-  width: 360px;
+  width: 350px;
   height: 200px;
   box-shadow: 0 5px 14px 0 rgb(65 69 88 / 10%),
     0 20px 24px -20px rgb(0 0 0 / 10%);
-  border-radius: 20px;
-  background-image: linear-gradient(rgba(4, 9, 30, 0.3), rgba(4, 9, 30, 0.3)),
+  border-radius: 15px;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.3), rgba(4, 9, 30, 0.7)),
     url(@/assets/images/readingquran.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-/* .amin {
-  position: absolute;
-  margin-top: 70px;
-  animation: updown 2s linear infinite;
+.nav-surah {
+  width: 390px;
+  height: max-content;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  cursor: pointer;
+  z-index: 1;
 }
-
-@keyframes updown {
-  0%,
-  100% {
-    top: 0;
-  }
-  50% {
-    top: 15px;
-  }
-} */
 
 @media only screen and (min-width: 480px) {
   .card {
@@ -88,12 +79,16 @@ a {
   }
 }
 
-.nav-surah {
-  width: 380px;
-  height: max-content;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  cursor: pointer;
+.title {
+  color: var(--primary);
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+}
+
+.title2 {
+  color: var(--primary);
+  font-size: 25px;
+  /* margin-left: 3em !important; */
 }
 
 ::-webkit-scrollbar {
@@ -102,18 +97,18 @@ a {
 
 .list {
   height: 85px;
-  box-shadow: 0 5px 14px 0 rgb(65 69 88 / 10%),
-    0 20px 24px -20px rgb(0 0 0 / 10%);
+  box-shadow: 0 1px 2px 1px rgb(65 69 88 / 10%);
   border-radius: 10px;
 }
 
 .list-kota {
-  box-shadow: 0 5px 14px 0 rgb(65 69 88 / 10%),
-    0 20px 24px -20px rgb(0 0 0 / 10%);
   border-radius: 10px;
-  height: max-content;
   transition: 0.3s ease;
-  font-family: LPMQ Isep Misbah;
+  font-size: 15px;
+  color: #000;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 0 1px 2px 1px rgb(65 69 88 / 10%);
 }
 
 .list-kota:hover {
@@ -125,13 +120,12 @@ a {
   border-radius: 10px;
   border: 1px dashed black;
   border-top: none;
-  box-shadow: 0 5px 14px 0 rgb(65 69 88 / 10%),
-    0 20px 24px -20px rgb(0 0 0 / 10%);
+  box-shadow: 0 1px 2px 1px rgb(65 69 88 / 10%);
 }
 
 @media only screen and (min-width: 480px) {
   .nav-surah {
-    width: 470px;
+    width: 480px;
     height: max-content;
     overflow-y: scroll;
   }
@@ -202,32 +196,30 @@ a {
 }
 
 .number {
-  /* background-color: #b9a2d8; */
-  /* opacity: 0.5; */
-  background-image: url(@/assets/images/vector2.png);
-  background-repeat: no-repeat;
-  background-size: 40px;
+  background: linear-gradient(to right, #b9a2d8, #9345f2);
+  /* box-shadow: 1px 4px 5px 1px rgba(151, 97, 218, 0.88); */
   padding: 1px;
   border-radius: 30px;
   height: 40px;
-  background-position-x: 3px;
 }
 
 .number .verses {
-  margin-top: 2px;
-  margin-left: 4px;
+  margin-top: 7px;
+  margin-left: -5px;
   border-radius: 50%;
   width: 35px;
   height: 35px;
-  padding: 8px;
   color: black;
   opacity: 1;
   font-size: 13px;
+  background-image: url(@/assets/images/vector2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .change-surah {
   position: fixed;
-  top: .5em;
+  top: 0.5em;
   width: 22em;
   padding: 5px 10px;
   border-radius: 20px;
@@ -243,12 +235,13 @@ a {
   font-size: 20px;
 }
 
-.basmalah a{
+.basmalah a {
   color: black !important;
 }
 
 .detail-s .arti {
   color: #000;
+  font-size: 13px;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
 }
@@ -256,7 +249,7 @@ a {
 .detail-s .surah-detail {
   text-align: right;
   margin-top: 20px;
-  font-size: 20px;
+  font-size: 25px;
   word-spacing: 5px;
   color: #000;
   font-family: LPMQ Isep Misbah;
@@ -323,7 +316,7 @@ a {
 
   .input:focus,
   .input:not(:invalid) {
-    width: 400px !important;
+    width: 470px !important;
     cursor: text;
     /* box-shadow: 0px 0px 0px #0e0e0e, 0px 0px 0px rgb(95 94 94 / 25%),
     inset 1.5px 1.5px 3px #0e0e0e, inset -1.5px -1.5px 3px #5f5e5e; */
@@ -334,8 +327,8 @@ a {
   color: #fff;
 }
 
-.container {
-  position: relative;
+.search {
+  position: fixed;
   --size-button: 40px;
   z-index: 3;
 }
@@ -358,7 +351,7 @@ a {
 
 .input:focus,
 .input:not(:invalid) {
-  width: 360px;
+  width: 365px;
   cursor: text;
 }
 
@@ -368,17 +361,17 @@ a {
   cursor: pointer;
 }
 
-.container .icon {
+.search .icon {
   position: absolute;
   width: var(--size-button);
   height: var(--size-button);
-  top: 0;
-  left: 14px;
+  bottom: 2px;
+  left: 2px;
   padding: 8px;
   pointer-events: none;
 }
 
-.container .icon svg {
+.search .icon svg {
   width: 100%;
   height: 100%;
 }
@@ -428,13 +421,12 @@ a {
   width: 150px;
   position: relative;
   left: 11em;
-  top: 0.5em;
+  /* top: 0.5em; */
 }
 
 .doa-doa {
   height: 180px;
   border-radius: 16px;
-  /* background: linear-gradient(to bottom right, #df98fa, #9055ff); */
   background-image: url(../images/hand.png);
   background-size: cover;
   background-position-y: 1em;
@@ -443,7 +435,7 @@ a {
     0 20px 24px -20px rgb(0 0 0 / 10%);
 }
 
-.doa-doa img{
+.doa-doa img {
   width: 150px;
   position: relative;
   left: 11em;
@@ -453,7 +445,6 @@ a {
 .jadwalshalat {
   height: 150px;
   border-radius: 16px;
-  /* background: linear-gradient(to top right, #df98fa, #9055ff); */
   background-image: url(../images/sholat.png);
   background-size: cover;
   background-position-y: 0.5em;
@@ -473,7 +464,7 @@ a {
 .asmaul {
   height: 150px;
   border-radius: 16px;
-  background: linear-gradient(to  left, #df98fa, #9055ff);
+  background: linear-gradient(to left, #df98fa, #9055ff);
   box-shadow: 0 5px 14px 0 rgb(65 69 88 / 10%),
     0 20px 24px -20px rgb(0 0 0 / 10%);
 }
@@ -505,17 +496,109 @@ a {
   font-size: 13px;
 }
 
-.menu h1{
+.menu h1 {
   color: #000;
   font-weight: 700;
   font-family: "Poppins", sans-serif;
 }
 
-@media only screen and (min-width:480px){
+@media only screen and (min-width: 480px) {
   .alquran img {
     width: 150px;
     position: relative;
     left: 17em;
     top: 0.5em;
   }
+}
+
+/* detail-sholat */
+
+.schedule {
+  width: 370px;
+  padding: 15px 0px;
+  border-radius: 20px;
+  box-shadow: 1px 2px 14px -7px rgba(0, 0, 0, 0.75);
+}
+
+.prayerS {
+  width: 370px;
+  height: 230px;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.3), rgba(4, 9, 30, 0.6)),
+    url(../images/jadwal.png);
+  background-size: cover;
+  box-shadow: 1px 2px 14px -7px rgba(0, 0, 0, 0.75);
+}
+
+.prayerS h2 {
+  color: white;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  margin-top: 3em;
+}
+
+.prayerS .h4 {
+  color: white;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 2px;
+  font-size: 15px;
+}
+
+.waktu-border {
+  border-bottom: 1px solid var(--primary);
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+
+@media only screen and (min-width: 480px) {
+  .prayerS {
+    width: 470px;
+    height: 260px;
+  }
+
+  .schedule {
+    width: 470px;
+  }
+}
+
+/* set-audio */
+audio {
+  width: 100px;
+  height: 30px; 
+  border-radius: 20px;
+  box-shadow: .5px .5px 5px 0px rgba(0,0,0,0.75);
+}
+audio::-webkit-media-controls-enclosure {
+  max-width: none;
+}
+audio::-webkit-media-controls-panel {
+  background: linear-gradient(to bottom right, #df98fa, #9055ff);
+}
+audio::-webkit-media-controls-play-button {
+  margin-left: 5px;
+  color: white;
+}
+audio::-webkit-media-controls-mute-button {
+  display: none;
+}
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+  display: none;
+}
+audio::-webkit-media-controls-timeline {
+  display: none;
+}
+audio::-webkit-media-controls-timeline-container {
+  display: none;
+}
+audio::-webkit-media-controls-toggle-closed-captions-button {
+  display: none;
+}
+audio::-webkit-media-controls-return-to-realtime-button {
+  display: none;
+}
+audio::-webkit-media-controls-rewind-button{
+  display: none;
 }

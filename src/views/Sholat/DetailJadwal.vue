@@ -1,42 +1,80 @@
 <template>
   <div style="height: 99vh">
-    <section>
+    <section class="d-flex justify-content-center align-items-center">
       <router-link to="/sholat">
-        <h2 class="d-flex justify-content-center align-items-center mt-5">
-          {{ $route.params.nama }}
-        </h2>
+        <div class="prayerS mt-3">
+          <h2 class="d-flex justify-content-center align-items-center">
+            {{ $route.params.nama }}
+          </h2>
+          <span class="d-flex justify-content-center align-items-center h4">
+            {{ detail.tanggal }}
+          </span>
+          <span
+            class="d-flex justify-content-center align-items-center h4"
+            id="time"
+          ></span>
+          <p
+            class="d-flex justify-content-center align-items-center mt-5 h4"
+            style="font-size: 10px; color: #fff; letter-spacing: 1px"
+          >
+            Klik Disini Untuk Kembali
+          </p>
+        </div>
       </router-link>
     </section>
     <section>
-      <div class="container">
-        <div class="row">
-          <div class="col-12 mt-3">
-            <span>TERBIT</span>
-            <div class="p-3 border bg-light">{{ detail.terbit }}</div>
+      <div
+        class="container d-flex justify-content-center align-items-center mt-2"
+      >
+        <div class="row schedule">
+          <div class="col-12">
+            <div class="p-4 d-flex justify-content-center waktu-border">
+              <span>Waktu Sholat</span>
+            </div>
           </div>
-          <div class="col-12 mt-3">
-            <span>SUBUH</span>
-            <div class="p-3 border bg-light">{{ detail.subuh }}</div>
+          <div class="col-12">
+            <div class="p-4 d-flex justify-content-between waktu-border">
+              <span>Terbit</span>
+              <span>
+                {{ detail.terbit }}
+              </span>
+            </div>
           </div>
-          <div class="col-12 mt-3">
-            <span>DZUHUR</span>
-            <div class="p-3 border bg-light">{{ detail.dzuhur }}</div>
+          <div class="col-12">
+            <div class="p-4 d-flex justify-content-between waktu-border">
+              <span>Subuh</span>
+              {{ detail.subuh }}
+            </div>
           </div>
-          <div class="col-12 mt-3">
-            <span>ASHAR</span>
-            <div class="p-3 border bg-light">{{ detail.ashar }}</div>
+          <div class="col-12">
+            <div class="p-4 d-flex justify-content-between waktu-border">
+              <span>Dzuhur</span>
+              {{ detail.dzuhur }}
+            </div>
           </div>
-          <div class="col-12 mt-3">
-            <span>MAGHRIB</span>
-            <div class="p-3 border bg-light">{{ detail.maghrib }}</div>
+          <div class="col-12">
+            <div class="p-4 d-flex justify-content-between waktu-border">
+              <span>Ashar</span>
+              {{ detail.ashar }}
+            </div>
           </div>
-          <div class="col-12 mt-3">
-            <span>ISYA</span>
-            <div class="p-3 border bg-light">{{ detail.isya }}</div>
+          <div class="col-12">
+            <div class="p-4 d-flex justify-content-between waktu-border">
+              <span>Maghrib</span>
+              {{ detail.maghrib }}
+            </div>
           </div>
-          <div class="col-12 mt-3">
-            <span>IMSAK</span>
-            <div class="p-3 border bg-light">{{ detail.imsak }}</div>
+          <div class="col-12">
+            <div class="p-4 d-flex justify-content-between waktu-border">
+              <span>Isya</span>
+              {{ detail.isya }}
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="p-4 d-flex justify-content-between waktu-border">
+              <span>Imsak</span>
+              {{ detail.imsak }}
+            </div>
           </div>
         </div>
       </div>
@@ -48,6 +86,7 @@
 export default {
   data: () => ({
     detail: [],
+    time: [],
     api: "https://api.banghasan.com/sholat/format/json/jadwal/kota/",
   }),
   methods: {
@@ -68,12 +107,18 @@ export default {
       );
       const data = await get.json();
       this.detail = data.jadwal.data;
+    },
 
-      console.log(this.detail);
+    timeToday: function () {
+      setInterval(function myTimer() {
+        const d = new Date();
+        document.getElementById("time").innerHTML = d.toLocaleTimeString();
+      }, 1000);
     },
   },
   mounted() {
     this.getDetail();
+    this.timeToday();
   },
 };
 </script>
