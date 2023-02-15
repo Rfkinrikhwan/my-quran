@@ -7,6 +7,9 @@ import doaharian from "@/views/DoaHarian/IndexDoa.vue";
 import jadwalSholat from "@/views/Sholat/JadwalSholat.vue";
 import DetailJadwalVue from "@/views/Sholat/DetailJadwal.vue";
 import MenuList from "@/views/menu/MenuList.vue";
+import Asmaul from "@/views/Asmaul Husna/indexAsmaul.vue";
+import Tafsir from "@/views/Tafsir Surah/TafsirSurah.vue";
+import TafsirDetail from "@/views/Tafsir Surah/DetailTafsir.vue";
 
 const routes = [
   {
@@ -48,6 +51,21 @@ const routes = [
     path: "/menu",
     name: "manu",
     component: MenuList,
+  },
+  {
+    path: "/asmaulhusnah",
+    name: "asmaulhusna",
+    component: Asmaul,
+  },
+  {
+    path: "/tafsir",
+    name: "Tafsir",
+    component: Tafsir,
+  },
+  {
+    path: "/detail/:id",
+    name: "tafsirDetail",
+    component: TafsirDetail,
   },
 ];
 

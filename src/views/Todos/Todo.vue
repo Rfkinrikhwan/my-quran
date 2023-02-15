@@ -1,25 +1,26 @@
 <template>
-  <div style="height: 99vh">
-    <div class="d-flex justify-content-center align-items-center">
-      <div
-        class="container mt-3 d-flex justify-content-center align-items-center"
-      >
-        <div
-          class="header-todo d-flex justify-content-center align-items-center"
-        >
-          <h4 v-if="todos.length == 0" class="title mt-3">
-            Add Schedule <i class="fa-solid fa-arrow-right right"></i>
-          </h4>
-          <h4 v-if="todos.length > 0" class="title mt-3">Your Schedule</h4>
+  <section>
+    <div class="nav-top fixed-top navbar-light bg-light">
+      <div class="">
+        <div class="container d-flex justify-content-start mt-2">
           <button
             type="button"
-            class="btn add-todo ms-4"
+            class="btn add-todo ms-2"
             data-bs-toggle="modal"
             data-bs-target="#exampleModal"
           >
             <i class="fa-solid fa-circle-plus"></i>
           </button>
+          <h3 class="mt-2 title" style="margin-left: 1em">Catatan Kegiatan</h3>
+          <span class="ms-4"><SideBar /> </span>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <div style="height: 99vh">
+    <div class="d-flex justify-content-center align-items-center">
+      <div class="container d-flex justify-content-center align-items-center">
         <section
           class="modal fade"
           id="exampleModal"
@@ -47,8 +48,10 @@
               >
                 <i class="fa-regular fa-circle-xmark"></i>
               </button>
-              <h4 class="d-flex justify-content-center align-items-center">
-                Add Your Schedule
+              <h4
+                class="d-flex justify-content-center align-items-center title"
+              >
+                Catat Kegiatan Kamu
               </h4>
               <div class="modal-body">
                 <input
@@ -56,7 +59,7 @@
                   class="form-control"
                   name="todo"
                   id="todo"
-                  placeholder="todo"
+                  placeholder="ketik di sini.."
                   v-model="newTodo"
                   @keyup.enter="addTodo()"
                   autocomplete="off"
@@ -87,9 +90,14 @@
 
     <section>
       <div
-        class="d-flex flex-column justify-content-center align-items-center mt-3"
+        class="d-flex flex-column justify-content-center align-items-center mt-5"
       >
-        <h3 v-if="todos.length == 0" class="mt-3">no schedule</h3>
+        <span
+          v-if="todos.length == 0"
+          style="text-decoration: underline"
+          class="mt-3 title"
+          >Tidak Ada Kegiatan</span
+        >
         <div
           v-for="(todo, index) in filter"
           :key="index"
@@ -130,11 +138,14 @@
 </template>
 
 <script>
+import SideBar from "@/components/SideBar.vue";
 import { ref } from "vue";
 
 export default {
   name: "todoVue",
-  components: {},
+  components: {
+    SideBar,
+  },
   data: () => ({
     searchSchedule: "",
     defaultData: [
@@ -226,7 +237,7 @@ export default {
 .add-todo {
   background: linear-gradient(to left, #b9a2d8, #9345f2);
   color: #fff;
-  padding: 10px 15px;
+  padding: 0px 13px;
   border-radius: 50px;
 }
 

@@ -40,11 +40,9 @@
               </div>
             </div>
             <h3 class="mt-2 title" style="margin-left: 4.3em">Jadwal Sholat</h3>
-            <router-link to="/menu">
-              <h3 class="mt-1 title2" style="margin-left: 2em">
-                <i class="fa-solid fa-house-chimney"></i>
-              </h3>
-            </router-link>
+            <span class="" style="margin-left: 3em">
+              <sidebar />
+            </span>
           </div>
         </div>
       </div>
@@ -73,9 +71,13 @@
 </template>
 
 <script>
+import sidebar from "@/components/SideBar.vue";
+
 export default {
   name: "DashBoard",
-  components: {},
+  components: {
+    sidebar,
+  },
   data: () => ({
     api: "https://api.banghasan.com/sholat/format/json/kota",
     prayer: [],

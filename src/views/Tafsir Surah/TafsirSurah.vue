@@ -6,7 +6,7 @@
           <div class="container d-flex justify-content-start mt-2">
             <div class="search">
               <input
-                placeholder="Cari Surah..."
+                placeholder="Cari Tafsir..."
                 required=""
                 class="input"
                 name="text"
@@ -39,8 +39,8 @@
                 </svg>
               </div>
             </div>
-            <h3 class="mt-2 title" style="margin-left: 5.5em">Al Qur`an</h3>
-            <span class="" style="margin-left: 5em">
+            <h3 class="mt-2 title" style="margin-left: 4.5em">Tafsir Qur`an</h3>
+            <span class="" style="margin-left: 4em">
               <side-bar />
             </span>
           </div>
@@ -48,28 +48,16 @@
       </div>
     </section>
 
-    <section style="margin-top: 20%" class="container">
-      <div>
-        <p class="intro mt-4 ms-4">Assalamualaikum&nbsp;</p>
-      </div>
-      <div class="d-flex justify-content-center align-items-center">
-        <div class="card"></div>
-      </div>
-    </section>
-    <!-- 
-  <section>
-    <h3 class="position-relative ms-4" style="top: 40px">Surah :</h3>
-  </section> -->
-
     <section
-      class="mt-3 d-flex justify-content-center align-items-center container"
+      style="margin-top: 4em"
+      class="d-flex justify-content-center align-items-center container"
     >
       <div class="nav-surah">
         <div class="container">
           <div class="row row-cols-1" v-for="(surah, key) in filter" :key="key">
             <router-link
               style="text-decoration: none"
-              :to="'/surah/' + surah.nomor + '/' + surah.namaLatin"
+              :to="'/detail/' + surah.nomor"
             >
               <div class="col mt-1">
                 <div
@@ -86,17 +74,12 @@
                       </div>
                       <div class="col">
                         <div class="surah position-relative">
-                          <p class="one">{{ surah.namaLatin }}</p>
-                          <p class="two">
-                            {{
-                              surah.arti + " - " + surah.jumlahAyat + " ayat"
-                            }}
+                          <p
+                            class="one"
+                            style="margin-top: 11px; font-size: 18px"
+                          >
+                            {{ surah.namaLatin }}
                           </p>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="ayat position-relative">
-                          <span>{{ surah.nama }}</span>
                         </div>
                       </div>
                     </div>
@@ -132,60 +115,10 @@ export default {
     isLoading: false,
   }),
   methods: {
-    //   getListSurah: function () {
-    //     this.isLoading = true;
-    //     this.$http
-    //       .get("https://api.npoint.io/99c279bb173a6e28359c/data/")
-    //       .then((resp) => {
-    //         console.log(resp);
-    //         const namaSurah = [];
-
-    //         resp.data.forEach((surah) => {
-    //           namaSurah.push(surah.nama);
-    //         });
-    //         this.listSurah = resp.data;
-    //         window.localStorage.setItem(
-    //           "listNamaSurah",
-    //           JSON.stringify(namaSurah)
-    //         );
-    //         this.$store.commit("surah/setListNamaSurah", namaSurah);
-    //         this.isLoading = false;
-    //       });
-    //   },
-    // },
-    // mounted() {},
-    // created: function () {
-    //   this.getListSurah();
-
-    // async getSurah() {
-    //   this.isLoading = true;
-    //   let result = await axios.get("https://equran.id/api/surat");
-    //   const namaSurah = [];
-    //   this.listSurah = result.data;
-    //   window.localStorage.setItem("listNamaSurah", JSON.stringify(namaSurah));
-    //   this.isLoading = false;
-    // },
-
-    // toSurah: function (surah) {
-    //   const url = this.$route.path + "/" + surah;
-    //   this.$router.push({ path: url });
-    //   console.log(surah);
-    // },
-
     getSurah: async function () {
       const raw = await fetch("https://equran.id/api/v2/surat");
       const data = await raw.json();
       this.listSurah = data.data;
-
-      // const namaSurah = [];
-
-      // raw.data.map((surah) => {
-      //   namaSurah.push(surah.nama);
-      // });
-
-      // window.localStorage.setItem("listNamaSurah", JSON.stringify(namaSurah));
-      // this.$store.commit("surah/setListNamaSurah", namaSurah);
-      // this.isLoading = false;
     },
   },
   mounted() {

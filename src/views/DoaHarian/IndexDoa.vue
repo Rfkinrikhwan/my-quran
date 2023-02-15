@@ -40,11 +40,9 @@
               </div>
             </div>
             <h3 class="mt-2 title" style="margin-left: 5em">Doa Harian</h3>
-            <router-link to="/menu">
-              <h3 class="mt-1 title2" style="margin-left: 3em">
-                <i class="fa-solid fa-house-chimney"></i>
-              </h3>
-            </router-link>
+            <h3 class="" style="margin-left: 3em">
+              <side-bar />
+            </h3>
           </div>
         </div>
       </div>
@@ -82,7 +80,7 @@
                         class="surah position-relative mt-2"
                         style="width: 200px"
                       >
-                        <p class="one">{{ doa.doa }}</p>
+                        <p class="one" style="margin: 12px">{{ doa.doa }}</p>
                       </div>
                     </div>
                   </div>
@@ -91,15 +89,10 @@
 
               <div class="list-detail d-grid p-4">
                 <span
-                  style="text-align: right; line-height: 50px"
-                  class="fw-bold fs-4 doa-harian"
+                  style="text-align: right"
+                  class="doa-ayat fw-bold fs-3 doa-harian"
                 >
                   {{ doa.ayat }}</span
-                >
-                <span
-                  class="mt-4"
-                  style="font-style: italic; text-align: right"
-                  >{{ '"' + doa.latin + '"' }}</span
                 >
                 <span class="mt-4">Artinya: {{ '"' + doa.artinya + '"' }}</span>
               </div>
@@ -119,8 +112,12 @@
 </template>
 
 <script>
+import SideBar from "@/components/SideBar.vue";
+
 export default {
-  components: {},
+  components: {
+    SideBar,
+  },
   data: () => ({
     detail: false,
     searchDoa: "",

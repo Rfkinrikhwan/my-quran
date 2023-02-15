@@ -1,0 +1,218 @@
+@font-face {
+    font-family: "LPMQ Isep Misbah";
+    /* src: url("//db.onlinewebfonts.com/t/eb289d26afbfd6114ddfdc053113218e.eot"); */
+    src: url("//db.onlinewebfonts.com/t/eb289d26afbfd6114ddfdc053113218e.eot?#iefix") format("embedded-opentype"),
+        url("//db.onlinewebfonts.com/t/eb289d26afbfd6114ddfdc053113218e.woff2") format("woff2"),
+        url("//db.onlinewebfonts.com/t/eb289d26afbfd6114ddfdc053113218e.woff") format("woff"),
+        url("//db.onlinewebfonts.com/t/eb289d26afbfd6114ddfdc053113218e.ttf") format("truetype"),
+        url("//db.onlinewebfonts.com/t/eb289d26afbfd6114ddfdc053113218e.svg#LPMQ Isep Misbah") format("svg");
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;700&display=swap");
+
+.cooming {
+    background: linear-gradient(rgba(4, 9, 30, 0.3), rgba(4, 9, 30, 0.3));
+    border-radius: 20px;
+    opacity: 0.5;
+}
+
+.active {
+    background: linear-gradient(to bottom right, #df98fa, #9055ff);
+    border-radius: 20px;
+    box-shadow: 0 1px 10px 0 rgba(4, 9, 30, 0.3);
+}
+
+// Asmaul-husna
+.sec-asmaul {
+    margin-top: 3em;
+
+    .wrap-asmaul {
+        border-radius: 15px;
+        box-shadow: 0 1px 4px 0 rgba(4, 9, 30, 0.3);
+
+        .asmaul-wrap {
+            background: linear-gradient(to bottom right, #df98fa, #9055ff);
+            border-top-right-radius: 15px;
+            border-top-left-radius: 15px;
+            padding: 30px;
+
+            .asmaul-ayat {
+                font-size: 25px;
+                font-weight: 800;
+                color: #fff;
+                font-family: LPMQ Isep Misbah;
+            }
+        }
+
+        .asmaul-latin {
+            padding: 1em;
+            text-align: center;
+            font-weight: 700;
+            font-size: 12px;
+            font-family: "Poppins", sans-serif;
+
+            .index {
+                background-color: #000;
+                border-radius: 30px;
+                color: #fff;
+                padding: 6px 12px;
+            }
+        }
+    }
+}
+
+// component-sidebar
+.open {
+    font-size: 25px;
+    font-weight: 800;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #9345f2;
+    border-radius: 20px;
+    transition: 0.5s ease;
+}
+
+.open:hover {
+    background-color: grey;
+}
+
+.wrap-sidebar {
+    background: linear-gradient(rgba(4, 9, 30, 0.3), rgba(4, 9, 30, 0.3));
+    width: 500px;
+    height: 100vh;
+    z-index: 9998;
+    box-shadow: 0 1px 4px 0 rgba(4, 9, 30, 0.3);
+
+    .sidebar {
+        background-color: #fff;
+        width: 250px;
+        height: 100vh;
+        z-index: 9999;
+        box-shadow: 0 1px 4px 0 rgba(4, 9, 30, 0.3);
+        padding: 10px;
+
+        .sidebar-one {
+            border-bottom: 1px solid black;
+            padding: 5px;
+
+            .close {
+                font-size: 25px;
+                cursor: pointer;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 15px;
+                transition: .3s ease-out;
+            }
+
+            .close:hover {
+                color: #fff;
+                background-color: grey;
+            }
+
+            .side-title {
+                color: #9345f2;
+                font-size: 25px;
+                font-weight: 900;
+                font-family: LPMQ Isep Misbah !important;
+                letter-spacing: 1px;
+            }
+        }
+
+        .sidebar-two {
+            border-bottom: 1px solid rgba(4, 9, 30, 0.3);
+            border-radius: 5px;
+            padding: 1em;
+            transition: all .3s ease-out;
+
+            img {
+                // width: 45px;
+            }
+
+            span {
+                color: #9345f2;
+                font-size: 16px;
+                font-weight: 700;
+                font-family: "Poppins", sans-serif;
+            }
+        }
+
+        .sidebar-two:hover {
+            background-color: rgba(4, 9, 30, 0.3);
+        }
+    }
+
+}
+
+.slide-fade-enter-active {
+    transition: all 0.1s ease-in;
+}
+
+.slide-fade-leave-active {
+    transition: all 0.1s ease-out;
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+    transform: translateX(-5px);
+    // opacity: 0;
+}
+
+
+//MENULIST
+.title-menu {
+    color: #9345f2;
+    font-size: 35px;
+    font-weight: 700;
+    font-family: LPMQ Isep Misbah;
+    letter-spacing: 1px;
+}
+
+
+//tafsirquran
+.detail-tafsir {
+    margin: auto;
+    width: 350px;
+    margin-top: 1em;
+    padding: 1em;
+    border-radius: 15px;
+    box-shadow: 0 1px 4px 0 rgba(4, 9, 30, 0.3);
+    text-align: justify;
+
+    .nomor {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        margin: auto;
+        border-radius: 50px;
+        font-size: 16px;
+        background-color: #9345f2;
+        box-shadow: 0 1px 4px 0 rgba(4, 9, 30, 0.3);
+        font-weight: 700;
+        color: #fff;
+        font-size: 18px;
+        font-family: "Poppins", sans-serif;
+    }
+
+    .teks {
+        color: #000;
+        font-size: 14px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (min-width: 480px) {
+    .detail-tafsir {
+        width: 450px;
+    }
+}

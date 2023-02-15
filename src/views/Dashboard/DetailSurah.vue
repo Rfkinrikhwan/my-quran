@@ -92,8 +92,8 @@ export default {
         const dataS = await fetch(this.url + "/" + this.$route.params.surah);
         const surahs = await dataS.json();
         this.surah = surahs.data;
-        this.audio = surahs.data.ayat.map((data) => data.audio["01"]);
-        console.log(this.audio);
+        // this.audio = surahs.data.ayat.map((data) => data.audio["01"]);
+        // console.log(this.audio);
       } catch (e) {
         console.log(e.message);
       }
