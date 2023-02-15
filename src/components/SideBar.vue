@@ -61,6 +61,10 @@ export default {
         name: "Asmasul Husna",
         path: "/asmaulhusnah",
       },
+      {
+        name: "Catatan Kegiatan",
+        path: "/todo",
+      },
     ],
   }),
 };

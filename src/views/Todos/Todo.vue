@@ -161,7 +161,7 @@ export default {
     const defaultData = [
       {
         done: false,
-        content: "write a blog post",
+        content: "Hafalan Apa Ya Hari ini?",
       },
     ];
     const todosData = JSON.parse(localStorage.getItem("todos")) || defaultData;
