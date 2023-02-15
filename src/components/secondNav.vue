@@ -3,10 +3,10 @@
     <section class="d-flex justify-content-center align-items-center">
       <div class="change-surah d-flex justify-content-start align-items-center">
         <router-link to="/listsurah">
-          <!-- <i
+          <i
             style="font-size: 25px; color: black"
             class="fa-solid fa-chevron-left"
-          ></i> -->
+          ></i>
         </router-link>
         <h4 class="basmalah">
           <router-link to="/listsurah">

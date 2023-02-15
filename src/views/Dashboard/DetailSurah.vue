@@ -1,8 +1,25 @@
 <template>
   <div style="height: 99vh">
-    <second-nav />
+    <section>
+      <div class="nav-top fixed-top navbar-light bg-light">
+        <div class="">
+          <div
+            class="container d-flex justify-content-center align-items-center"
+          >
+            <router-link to="/listsurah">
+              <h3 class="title position-relative mt-3" style="right: 3.5em">
+                <i class="fa-solid fa-arrow-left"></i>
+              </h3>
+            </router-link>
+            <h3 class="title mt-3">
+              {{ $route.params.namaLatin }}
+            </h3>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <section class="mt-5">
+    <section class="" style="margin-top: 4em">
       <div class="detail-surah">
         <div
           class="container d-flex justify-content-center align-items-center"
@@ -57,7 +74,7 @@
 </template>
 
 <script>
-import secondNav from "@/components/secondNav.vue";
+// import secondNav from "@/components/secondNav.vue";
 // import AudioPlayer from "@liripeng/vue-audio-player";
 
 export default {
@@ -80,7 +97,7 @@ export default {
     // ],
   }),
   components: {
-    secondNav,
+    // secondNav,
     // AudioPlayer,
   },
   methods: {

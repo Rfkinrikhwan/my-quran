@@ -3,8 +3,8 @@
     <div class="content-in d-flex justify-content-center align-items-center">
       <div class="container text-center">
         <div class="row d-flex justify-content-center align-items-center">
-          <div class="title col-6 mt-0">
-            <h1>ABIZAR</h1>
+          <div class="title-menu col-6 mt-0">
+            <span>أبيزار</span>
           </div>
         </div>
         <div class="row d-flex justify-content-center align-items-center">
@@ -17,13 +17,12 @@
             <!-- <img class="quran-one" src="@/assets/images/quranhome.png" alt="" /> -->
           </div>
           <div class="col-6">
-            <button class="started">
-              <router-link
-                style="text-decoration: none; color: #faf8fc"
-                to="/menu"
-                >Get started</router-link
-              >
-            </button>
+            <router-link
+              style="text-decoration: none; color: #faf8fc"
+              to="/menu"
+            >
+              <button class="started">Get started</button>
+            </router-link>
           </div>
         </div>
       </div>
@@ -50,12 +49,6 @@ export default {
   background-color: #5222c2;
   background-image: url(@/assets/images/started.svg);
   background-size: cover;
-}
-
-.title h1 {
-  color: #9345f2;
-  font-weight: 900;
-  font-family: revert;
 }
 
 .started {
