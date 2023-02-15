@@ -57,8 +57,10 @@
             :key="index"
           >
             <router-link :to="'/sholat/' + kota.id + '/' + kota.nama">
-              <div class="col mb-1">
-                <div class="list-kota p-3">
+              <div
+                class="col mb-1 d-flex justify-content-center align-items-center"
+              >
+                <div class="list-kota p-3 mt-2">
                   <span>{{ kota.nama }}</span>
                 </div>
               </div>
