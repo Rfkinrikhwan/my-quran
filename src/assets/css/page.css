@@ -417,7 +417,7 @@ a {
 /* menu-list */
 .alquran {
   height: 150px;
-  border-radius: 16px;
+  border-radius: 25px;
   background-image: url(../images/quran.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -425,7 +425,7 @@ a {
 
 .doa-doa {
   height: 180px;
-  border-radius: 16px;
+  border-radius: 25px;
   background-image: url(../images/berdoa.png);
   background-size: 200px;
   background-position-y: 3em;
@@ -441,7 +441,7 @@ a {
 
 .jadwalshalat {
   height: 150px;
-  border-radius: 16px;
+  border-radius: 25px;
   background-image: url(../images/sujud.png);
   background-size: 350px;
   background-position-y: 3em;
@@ -451,7 +451,7 @@ a {
 
 .tafsir {
   height: 180px;
-  border-radius: 16px;
+  border-radius: 25px;
   background-image: url(../images/quran3d.png);
   background-repeat: no-repeat;
   background-position-y: 30px;
@@ -461,7 +461,7 @@ a {
 
 .asmaul {
   height: 150px;
-  border-radius: 16px;
+  border-radius: 25px;
   background-image: url(../images/allah.png);
   background-repeat: no-repeat;
   background-size: 220px;
@@ -471,7 +471,7 @@ a {
 
 .notes {
   height: 150px;
-  border-radius: 16px;
+  border-radius: 25px;
   background-image: url(../images/notes.png);
   background-repeat: no-repeat;
   background-position-x: 1em;
@@ -481,7 +481,7 @@ a {
 
 .dzikir {
   height: 150px;
-  border-radius: 16px;
+  border-radius: 25px;
   background-image: url(../images/tasbih.png);
   background-repeat: no-repeat;
   background-position-x: -2em;
